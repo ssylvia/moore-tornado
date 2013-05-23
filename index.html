@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
     <title>Human activities are changing the face of the earth</title>
-    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/2.7/js/dojo/dijit/themes/tundra/tundra.css">
-    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/2.7/js/esri/dijit/css/Popup.css">    
+    <link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/tundra/tundra.css">
+    <link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/esri/css/esri.css" />  
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/popup.css">
 
@@ -15,7 +15,7 @@
         parseOnLoad: true
       };
     </script>
-    <script type="text/javascript" src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=2.7compact"></script>
+    <script type="text/javascript" src="//serverapi.arcgisonline.com/jsapi/arcgis/3.5"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="javascript/map.js"></script>
     <script type="text/javascript" src="javascript/layout.js"></script>
@@ -29,9 +29,9 @@
         //The ID for the map from ArcGIS.com
         webmap : "4d1c60999e794c48ac909d543379ab19",
         //Enter a title, if no title is specified, the webmap's title is used.
-        title : "Moore, Oklahoma Before and After the May 2013 Tornado",
+        title : "Moore, Oklahoma Before and After the Tornado",
         //Enter a subtitle, if not specified the ArcGIS.com web map's summary is used
-        subtitle : "Use the swipe tool to compare aerial views of the Oklahoma City suburb before and after the tornado that struck on May 20, 2013.",
+        subtitle : "Use the swipe tool to compare aerial views before and after the tornado of May 20, 2013.",
 		//Choose the layer that will disappear under the swipe tool. All layers are given a value from 0 to number of layers available in your map
 		chooseSwipeLevel : "1",
         //If the webmap uses Bing Maps data, you will need to provided your Bing Maps Key
@@ -49,14 +49,7 @@
     //show map on load 
     dojo.addOnLoad(init);
     </script>
-    
-    <style type="text/css">
-	  .esriSimpleSlider{
-	    background-color:#dadada;
-		right:10px;
-	    left:auto;
-	  }
-	</style>
+  
     <script type="text/javascript">
 	  var iPad = false;
 	  $(document).ready(function(e) {
@@ -110,6 +103,7 @@
 
           <!-- Map Section -->
           <div id="map" dojotype="dijit.layout.ContentPane" region="center">
+            <div id="geocoder"></div>
           	<div class="moveable" title="Move the slider left or right" id="sliderdiv">
             </div>
             <div id="legendCon">

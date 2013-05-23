@@ -141,7 +141,14 @@
       #map {
       margin:0;
       }
-	  
+
+	  #geocoder{
+      position: absolute;
+      top: 20px;
+      right: 72px;
+      z-index: 100;
+      }
+
 	  #swipeImg{
 	  display:none;
 	  position:absolute;
