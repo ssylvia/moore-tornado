@@ -1,4 +1,4 @@
-﻿  	  html,body {
+ 	  html,body {
       height:100%;
       width:100%;
       padding:0;
@@ -19,36 +19,18 @@
 	  font-weight:bold;
 	  text-decoration:none;
       }
-	  
+
 	  a:hover{
 	  text-decoration:underline;
 	  }
-	  
-	  .sourceLink{
-	  color:#fff;
-	  text-decoration:underline;
-	  }
-	  
-	  .sourceLink: hover{
-	  color:#fff;
-	  text-decoration:none;
-	  }
-	  
-	  #sources{
-	  position:absolute;
-	  right:25px;
-	  top:120px;
-	  font-size:11px;
-	  font-family:Arial, Helvetica, sans-serif;
-	  }
 
       #header {
-      height:150px;
+      height:115px;
       background:#444;
 	  color:#fff;
       margin:0;
       }
-	  
+
 	  #headerText{
 	  padding-top:20px;
       padding-left:25px;
@@ -61,8 +43,8 @@
       font-size:20px;
 	  font-weight:bold;
       text-align:left;
-      white-space: nowrap;  
-      overflow: hidden;  
+      white-space: nowrap;
+      overflow: hidden;
       text-overflow: ellipsis;
       -o-text-overflow:ellipsis;
       }
@@ -72,54 +54,18 @@
 	  margin-top:10px;
       overflow: hidden;
       }
-	  
-	  #links{
-	  position:absolute;
-	  top:115px;
-	  .left:0px;
-	  margin-left:21px;
-	  height:35px;
-	  width:1000px;
-	  }
-	  
-	  .links{
-	  display:table-cell;
-	  text-align:center;
-	  background:#828282;
-	  height:30px;
-	  width:40px;
-	  margin-left:4px;
-	  float:left;
-	  white-space:nowrap;
-	  cursor:pointer;
-	  }
-	  
-	  .links:hover{
-	  background:#c4c4c4;
-	  }
-	  
-	  p.navText{
-	  margin-top:6px;
-	  color:#fff;
-	  font-size:14px;
-	  font-family:Arial, Helvetica, sans-serif;
-  	  }
-	  
-	  .selected{
-	  background:#c4c4c4;
-	  }
-	  
+
 	  #logoArea{
 	  float:right;
 	  padding-top:25px;
 	  padding-right:25px;
 	  text-align:right;
 	  }
-	  
+
 	  #social{
 	  margin-bottom:20px;
 	  }
-	  
+
 	  #msLink{
 	  color:#fff;
 	  font-family:Arial, Helvetica, sans-serif;
@@ -127,12 +73,12 @@
 	  font-size:13px;
 	  outline:none;
 	  }
-	  
+
 	  #logo{
 	  border:none;
 	  outline:none;
 	  }
-	  
+
 	  #logoImg{
 	  border:none;
 	  outline:none;
@@ -141,32 +87,20 @@
       #map {
       margin:0;
       }
-	  
+
+      #geocoder{
+      position: absolute;
+      top: 20px;
+      right: 72px;
+      z-index: 30;
+      }
+
 	  #swipeImg{
 	  display:none;
 	  position:absolute;
 	  z-index:2;
 	  }
-	  
-	  #prevImg{
-	  display:none;
-	  position:absolute;
-	  z-index:101;
-	  cursor:pointer;
-	  }
-	  
-	  #nextImg{
-	  display:none;
-	  position:absolute;
-	  right:0;
-	  z-index:101;
-	  cursor:pointer;
-	  }
-	  
-	  #timeSliderDiv{
-	  display:none;
-	  }
-	  
+
 	  .moveable {
       position:absolute;
       border-left:1px solid #848484;
@@ -179,23 +113,7 @@
       z-index: 30;
       cursor: col-resize;
 	  }
-	  
-	  #mapInfo{
-	  position:absolute;
-	  width:200px;
-	  background-color:#fff;
-	  z-index:100;
-	  }
-	  
-	  #mapTitle{
-	  font-family:Arial, Helvetica, sans-serif;
-	  margin:15px 25px;
-	  }
 
-	  #mapText{
-	  margin:15px 25px;
-	  }
-	  
 	  .moveable:hover {
 	  background-color:#999;
 	  }
@@ -208,21 +126,22 @@
       margin:0;
       padding:10px 15px 5px;
       }
-	  
+
       .map .bingLogo-lg {
       left:18px !important;
       }
-	  
+
 	  #legendCon{
 	  position:absolute;
  	  width:300px !important;
 	  margin-left:100px;
+      border:2px solid #848484;
   	  z-index:100;
 	  }
 
 	  #legendDiv{
 	  display:none;
-	  background:#848484;
+	  background:#fff;
 	  max-height:450px;
 	  overflow:auto;
 	  padding:10px;
@@ -233,15 +152,14 @@
 	  position:relative;
 	  background:#848484;
 	  margin-top:-1px;
-	  width:125px;
+	  width:100%;
 	  .height:28px;
 	  cursor:pointer;
 	  z-index:100;
 	  color:#fff;
 	  font-family:Arial, Helvetica, sans-serif;
-	  display:none;
 	  }
-	  
+
 	  #legTogText{
 	  position:relative;
 	  margin:auto;
@@ -251,11 +169,11 @@
 	  color:#fff;
 	  font-family:Arial, Helvetica, sans-serif;
 	  }
-	  
+
 	  g,v {
 	  cursor:pointer;
 	  }
-	
+
 	  #loadingCon{
 	  position:absolute;
 	  z-index:99;
@@ -263,13 +181,13 @@
       top:40%;
 	  text-align:center;
 	  }
-		
+
 	  #loadingDialog{
 	  margin:auto;
 	  background-color:#dadada;
-	  width:300px	
+	  width:300px
 	  }
-		
+
 	  #loadingHeader{
 	  background-color:#444;
 	  color:#fff;
@@ -277,12 +195,30 @@
 	  padding-bottom:10px;
 	  width:300px;
 	  }
-		
+
 	  #loading{
 	  padding-top:10px;
 	  }
-		
+
 	  #loadingImg{
 	  margin-top:5px;
 	  padding-bottom:10px;
 	  }
+
+      .esriRtl #headerText{
+      float:right;
+      padding-right:25px;
+      }
+
+      .esriRtl #title{
+      text-align:right;
+      }
+
+      .esriRtl #logoArea{
+      float:left;
+      padding-right:25px;
+      }
+
+      .maximize{
+      	display:none;
+      }
