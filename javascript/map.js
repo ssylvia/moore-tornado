@@ -12,6 +12,7 @@
      var map, urlObjects, chooseLayer, swipeslider, swipediv, clipval, offset_left, offset_top, swipelayerid="", swipeconnect=null;
      var mapLoaded = false;
 	 var timeProperties = null;
+   var _embed = false;
 	 
 	 function initMap() {
        patchID();
@@ -49,6 +50,25 @@
        if(urlObject.query.bingMapsKey){
          configOptions.bingmapskey = urlObject.query.bingMapsKey;      
        }
+
+      if (urlObject.query.embed || urlObject.query.embed === "") {
+        _embed = true;
+      }
+
+
+
+    if(_embed){
+      $("#header").hide();
+      $("#mapInfo").prepend($("#links"));
+      $("#links").css({
+        "position": "relative",
+        "margin": "auto",
+        "width": "auto",
+        "height": "0px",
+        "top": "0px"
+      });
+      dijit.byId("mainWindow").layout();
+    }
 
 	   esri.arcgis.utils.arcgisUrl = "http://arcgis.com/sharing/content/items";	
 		

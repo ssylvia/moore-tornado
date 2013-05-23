@@ -21,7 +21,7 @@ var extentText = [
 	"Although the Moore Medical center was badly damaged in the tornado, none of the staff or patients at the facility were killed or injured.",
 	"The roof of the Moore AMF Bowling Lanes was torn off by the storm. Photographers documented bowling pins standing in place despite the destruction.",
 	"No deaths occurred at Briarwood, the second school destroyed by the tornado. Neither school had a reinforced storm shelter.",
-	"The tornado that struck Moore, Oklahoma had peak winds of over 200 miles per hour. It was in contact with the ground for 50 minutes and traveled about 17 miles.<br /><br /><p style='font-family:Arial, Helvetica, sans-serif; font-size:10px'><strong>Sources:</strong> Left, <a style='color:#333; text-decoration:underline; font-weight:normal;' onMouseOver='overA()' onMouseOut='outA()' href='http://www.btls.us/' target='_blank'>Bearing Tree Land Survey</a>; Right, Esri's <a style='color:#333; text-decoration:underline; font-weight:normal;' onMouseOver='overA()' onMouseOut='outA()' href='http://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9' target='_blank'>World Imagery</a> basemap</p>"];
+	"The tornado that struck Moore, Oklahoma had peak winds of over 200 miles per hour. It was in contact with the ground for 50 minutes and traveled about 17 miles.<br /><br /><p style='font-family:Arial, Helvetica, sans-serif; font-size:10px'><strong>Sources:</strong> Left, <a style='color:#333; text-decoration:underline; font-weight:normal;' onMouseOver='overA()' onMouseOut='outA()' href='http://www.btls.us/' target='_blank'>Bearing Tree Land Surveying</a>; Right, Esri's <a style='color:#333; text-decoration:underline; font-weight:normal;' onMouseOver='overA()' onMouseOut='outA()' href='http://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9' target='_blank'>World Imagery</a> basemap</p>"];
 
 var mapIndex = 0;
 
@@ -86,6 +86,12 @@ function setUpLocations(){
 		$("#mapTitle").html(extentTitles[mapIndex]);
 		$("#mapText").html(extentText[mapIndex]);
     });
+    if(_embed){
+      $(".links").css({
+        "margin-left": 0,
+        "margin-bottom": "20px"
+      });
+    }
 }
 
 function nextExtent(){
