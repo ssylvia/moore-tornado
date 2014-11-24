@@ -89,7 +89,7 @@
       $("#mapTitle").html(extentTitles[0]);
       $("#mapText").html(extentText[0]);
 
-	   esri.arcgis.utils.arcgisUrl = "http://arcgis.com/sharing/content/items";	
+	   //esri.arcgis.utils.arcgisUrl = "http://arcgis.com/sharing/content/items";	
 		
 	   var mapDeferred = esri.arcgis.utils.createMap(configOptions.webmap, "map", {
          mapOptions: {
